@@ -158,21 +158,7 @@ class fisherFace:
 
 a = fisherFace()
 train_data, train_label, test_data, test_label = process_data()
-# print(a.fisherfaces(train_data, train_label))
-# [D, W, mu] = a.fisherfaces(train_data, train_label)
-# print(len(W[:, 1]))
-# e = W[:, 1].reshape(-1, 1)
-# print(e)
 
-# print(a.project(e, train_data[0].reshape(1, -1), mu))
-# p = a.project(e, train_data[0].reshape(1, -1), mu)
-# R = a.reconstruct(e, p, mu)
-
-# R = R.reshape(train_data[0].shape)
-
-
-# print(a.reconstruct(e, p, mu))
-# print(R)
 [D, W, mu] = a.fisherfaces(a.asRowMatrix(train_data), train_label)
 
 E = []
@@ -195,9 +181,3 @@ a.subplot(
 )
 
 
-# class EuclideanDistance()
-
-
-# class FisherfacesMode(BaseModel):
-
-#     def __init__(self, )

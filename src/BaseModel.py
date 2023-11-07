@@ -76,17 +76,3 @@ class FisherfaceModel(BaseModel):
         return minClass
 
 
-train_data, train_label, test_data, test_label = process_data()
-
-# print(test_data.shape, test_label)
-print(len(train_data[:1]), len(train_data[1:]))
-model = FisherfaceModel(train_data, train_label)
-
-print(test_label[19])
-for index, test in enumerate(test_data):
-    print(
-        "Expected =",
-        test_label[index],
-        " / Predicted =",
-        model.predict(test_data[index]),
-    )

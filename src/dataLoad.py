@@ -44,13 +44,9 @@ def process_data():
     return train_data, train_label, test_data, test_label
 
 
-print(process_data())
-
-
 def process_data_2(path, sz=None):
     c = 0
     x, y = [], []
-    print("I am in")
     i = 0
     for dirname, dirnames, filenames in os.walk(path):
         for subdirname in dirnames:
@@ -71,11 +67,3 @@ def process_data_2(path, sz=None):
             c = c + 1
 
     return x, y
-
-
-x, y = process_data_2("faces", (150, 150))
-
-
-a, b, c, d = process_data()
-
-print(len(a[0][0]))
